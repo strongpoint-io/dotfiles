@@ -1,0 +1,3 @@
+#!/bin/sh
+
+tmux new -As $(basename $(pwd) | tr . -)
