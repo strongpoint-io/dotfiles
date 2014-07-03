@@ -7,3 +7,5 @@ else
 fi
 
 PROMPT="%F{12}%~%  ${USER_SIGN}%f "
+
+export PATH="$HOME/.bin:$PATH"
