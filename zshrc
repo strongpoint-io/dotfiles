@@ -8,4 +8,9 @@ fi
 
 PROMPT="%F{12}%~%  ${USER_SIGN}%f "
 
-export PATH="$HOME/.bin:$PATH"
+export PATH="$HOME/.bin:$HOME/.rbenv/bin:$PATH"
+
+# Load rbenv if available in path
+if which rbenv &>/dev/null ; then
+  eval "$(rbenv init -)"
+fi
