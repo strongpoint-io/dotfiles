@@ -12,5 +12,5 @@ export PATH="$HOME/.bin:$HOME/.rbenv/bin:$PATH"
 
 # Load rbenv if available in path
 if which rbenv &>/dev/null ; then
-  eval "$(rbenv init -)"
+  eval "$(rbenv init --no-rehash -)"
 fi
