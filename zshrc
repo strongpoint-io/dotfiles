@@ -14,3 +14,7 @@ export PATH="$HOME/.bin:$HOME/.rbenv/bin:$PATH"
 if which rbenv &>/dev/null ; then
   eval "$(rbenv init --no-rehash -)"
 fi
+
+# aliases
+[[ -f ~/.aliases ]] && source ~/.aliases
+
