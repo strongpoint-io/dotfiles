@@ -15,6 +15,9 @@ if which rbenv &>/dev/null ; then
   eval "$(rbenv init --no-rehash -)"
 fi
 
+# use vim as an default editor
+export EDITOR=vim
+
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
