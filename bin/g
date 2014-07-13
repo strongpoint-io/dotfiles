@@ -1,0 +1,9 @@
+#!/bin/sh
+# Alias for git, with no arguments run "git status"
+
+if [ -z "$1" ]
+then
+  git status
+else
+  git $@
+fi
