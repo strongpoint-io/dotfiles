@@ -1,0 +1,19 @@
+[core]
+  excludesfile = ~/.gitignore
+[fetch]
+  prune = true
+[merge]
+  ff = only
+[push]
+  default = current
+[alias]
+  a = add
+  aa = add --all
+  ap = add --patch
+  ca = commit --ammend
+  ci = commit -v
+  co = checkout
+[color]
+  ui = auto
+[include]
+  path = .gitconfig.local
