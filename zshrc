@@ -35,8 +35,12 @@ setopt hist_verify
 setopt inc_append_history
 setopt share_history
 
-bindkey "^[[A" up-line-or-search
-bindkey "^[[B" down-line-or-search
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
+bindkey "^[[A" up-line-or-beginning-search # Up
+bindkey "^[[B" down-line-or-beginning-search # Down
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
