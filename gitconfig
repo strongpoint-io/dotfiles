@@ -14,6 +14,8 @@
   ci = commit -v
   co = checkout
   up = smart-pull
+  d = diff
+  dc = diff --cached
 [color]
   ui = auto
 [include]
