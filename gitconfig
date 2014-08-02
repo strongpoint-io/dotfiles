@@ -16,6 +16,9 @@
   up = smart-pull
   d = diff
   dc = diff --cached
+  p = push
+  b = bisect
+  l = log -w --color --graph --pretty=tformat:'%Cred%h -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)%an%Creset'
 [color]
   ui = auto
 [include]
