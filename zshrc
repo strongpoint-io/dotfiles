@@ -18,6 +18,8 @@ fi
 # use vim as an default editor
 export EDITOR=vim
 
+# Enable colored output for commands like ls...
+export CLICOLOR=1
 
 ## History
 if [ -z $HISTFILE ]; then
