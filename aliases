@@ -1,3 +1,6 @@
 alias e="$EDITOR"
 alias rgrep="grep -R"
 alias ll="ls -l"
+
+# Custom aliases
+[[ -f ~/.aliases.local ]] && source ~/.aliases.local

@@ -47,3 +47,5 @@ bindkey "^[[B" down-line-or-beginning-search # Down
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
 
+# Custom config
+[[ -f ~/.zshrc.local ]] && source ~/.zshrc.local
