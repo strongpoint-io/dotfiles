@@ -1,12 +1,19 @@
 CURRENT_USER=`whoami`
 
+if [ -n "$SSH_CLIENT" ] || [ -n "$SSH_TTY" ]; then
+  SESSION_TYPE=ssh
+  HOSTNAME_PART="%F{3}[%F{8}%M%F{3}] "
+else
+  SESSION_TYPE=local
+fi
+
 if [[ $CURRENT_USER == 'root' ]]; then
   USER_SIGN="%F{1}☠"
 else
   USER_SIGN="%F{2}∴"
 fi
 
-PROMPT="%F{12}%~%  ${USER_SIGN}%f "
+PROMPT="${HOSTNAME_PART}%F{12}%~%  ${USER_SIGN}%f "
 
 export PATH="$HOME/.bin:$HOME/.rbenv/bin:$PATH"
 
