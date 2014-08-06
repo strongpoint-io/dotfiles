@@ -15,7 +15,7 @@ fi
 
 PROMPT="${HOSTNAME_PART}%F{12}%~%  ${USER_SIGN}%f "
 
-export PATH="$HOME/.bin:$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.bin:$HOME/.rbenv/bin:$PATH:/usr/local/rbenv/bin"
 
 # Load rbenv if available in path
 if which rbenv &>/dev/null ; then
