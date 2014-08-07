@@ -10,7 +10,7 @@
   a = add
   aa = add --all
   ap = add --patch
-  ca = commit --ammend
+  ca = commit --amend
   ci = commit -v
   co = checkout
   up = smart-pull
