@@ -1,3 +1,12 @@
 #!/bin/sh
+# Attach to session name given in arguments or the same name as current
+# directory name.
 
-tmux new -As $(basename $(pwd) | tr . -)
+name=$@
+
+if [ -z "$name" ]
+then
+  name=$(basename $(pwd) | tr . -)
+fi
+
+tmux new -As "$name"
