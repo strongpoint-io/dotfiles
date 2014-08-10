@@ -66,8 +66,16 @@ autoload -U up-line-or-beginning-search
 autoload -U down-line-or-beginning-search
 zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
+
+# Use emacs style key bindings
+bindkey -e
+
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
+
+# Bind Alt+Left/Right to jump between words
+bindkey '^[[1;9C' forward-word
+bindkey '^[[1;9D' backward-word
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
