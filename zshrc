@@ -13,7 +13,25 @@ else
   USER_SIGN="%F{2}∴"
 fi
 
-PROMPT="${HOSTNAME_PART}%F{12}%~%  ${USER_SIGN}%f "
+git_branch() {
+  ref=`git symbolic-ref -q HEAD 2> /dev/null`
+
+  if [ -n "$ref" ]
+  then
+    echo ${ref##"refs/heads/"}
+  fi
+}
+
+git_prompt() {
+  branch=$(git_branch)
+  if [ -n "$branch" ]; then
+    echo "%F{10}%B${branch}%b "
+  fi
+}
+
+setopt PROMPT_SUBST
+
+PROMPT='${HOSTNAME_PART}%F{12}%~%  ${USER_SIGN} $(git_prompt)%f'
 
 export PATH="$HOME/.bin:$HOME/.rbenv/bin:$PATH:/usr/local/rbenv/bin"
 
