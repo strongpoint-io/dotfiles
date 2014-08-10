@@ -22,10 +22,17 @@ git_branch() {
   fi
 }
 
+git_dirty() {
+  git_status=`git status --porcelain`
+  [ -n "$git_status" ]
+}
+
 git_prompt() {
   branch=$(git_branch)
   if [ -n "$branch" ]; then
-    echo "%F{10}%B${branch}%b "
+    git_dirty
+    color=$((9+$?))
+    echo "%F{${color}}%B${branch}%b "
   fi
 }
 
